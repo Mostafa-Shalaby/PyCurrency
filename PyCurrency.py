@@ -81,7 +81,7 @@ def Classify(RefCurrencies, TestCurrencies, loweThresh = 0.7, matchThreshold = 4
                 if m.distance < loweThresh * n.distance:
                     goodMatches.append(m)
             # Calculates Percentage
-            percentageMatch = (len(goodMatches) / len(RefCurrency.keypoints)) * 100.0
+            percentageMatch = (len(goodMatches) / len(RefCurrency.descriptors)) * 100.0
             percentages.append(percentageMatch)
             print(RefCurrency.directory, "| Percentage =", percentageMatch)
         # Finds the currency value depending on the percentages of the descriptor matching.
